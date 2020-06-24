@@ -9,7 +9,7 @@
     "export": "nuxt-ts export",
     "serve": "nuxt-ts serve",
     "generate": "nuxt-ts build && nuxt-ts export",
-    "deploy": "yarn generate && gh-pages -d dist -b master -r git@github.com:craftcodery/craftcodery.github.io.git"
+    "deploy": "yarn generate && gh-pages -d dist -b master -r git@github.com:craftcodery/craftcodery.github.io.git -t"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.4.10",
