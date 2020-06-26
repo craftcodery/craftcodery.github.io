@@ -1,3 +1,6 @@
+/* Base Tailwind Styles */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
+
+/* Tailwind Utilities (always import last) */
 @import 'tailwindcss/utilities';
