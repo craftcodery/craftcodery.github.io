@@ -4,14 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "serve": "nuxt-ts serve",
-    "generate": "nuxt-ts build && nuxt-ts generate",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "serve": "nuxt serve",
+    "generate": "nuxt build && nuxt generate",
     "deploy": "yarn generate && gh-pages -d dist -b master -r git@github.com:craftcodery/craftcodery.github.io.git -t"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^0.4.10",
     "nuxt": "^2.15.0"
   },
   "devDependencies": {
