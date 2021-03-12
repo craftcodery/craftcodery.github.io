@@ -1,9 +1,9 @@
 /*
-** TailwindCSS Configuration File
-**
-** Docs: https://tailwindcss.com/docs/configuration
-** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
-*/
+ ** TailwindCSS Configuration File
+ **
+ ** Docs: https://tailwindcss.com/docs/configuration
+ ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
+ */
 
 const defaultTheme = require('tailwindcss/defaultTheme');
 
@@ -15,24 +15,24 @@ module.exports = {
       },
     },
   },
-  variants: {},
-  plugins: [
-    require('@tailwindcss/ui'),
-  ],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio')],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
-    enabled: true,
+    enabled: process.env.APP_ENV !== 'local',
+    layers: ['utilities'],
     content: [
-      'components/**/*.vue',
-      'layouts/**/*.vue',
-      'pages/**/*.vue',
-      'plugins/**/*.js',
+      'src/components/**/*.vue',
+      'src/helpers/**/*.ts',
+      'src/layouts/**/*.vue',
+      'src/middleware/**/*.ts',
+      'src/models/**/*.ts',
+      'src/pages/**/*.vue',
+      'src/plugins/**/*.ts',
+      'src/services/**/*.ts',
       'nuxt.config.js',
     ],
     options: {
-      defaultExtractor: content => content.match(/[\w-/.:]+(?<!:)/g) || [],
-      whitelist: [],
-      whitelistPatterns: [/svg.*/, /.*-green-.*/],
+      safelist: [/svg.*/, /-green-.*/],
     },
   },
 };
