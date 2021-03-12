@@ -17,4 +17,11 @@ $ yarn start
 $ yarn generate
 ```
 
+## Deploying
+
+```bash
+# deploy to production
+$yarn deploy
+```
+
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
